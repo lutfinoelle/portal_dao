@@ -38,8 +38,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" required autocomplete="off" value="{{ $user->email }}">
+                            <label for="no_pn">No. PN</label>
+                            <input type="text" class="form-control" name="no_pn" id="no_pn" required autocomplete="off" value="{{ $user->no_pn }}">
                         </div>
 
                         <div class="form-group">

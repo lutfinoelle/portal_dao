@@ -51,11 +51,17 @@
         </a>
     </li>
 
-    <li class="sidebar-item">
-        <a href="index.html" class="sidebar-link">
-            <i class="bi bi-file-text-fill"></i>
+    <li class="sidebar-item has-sub {{ Route::is('tutup.*') ? 'active' : '' }}">
+        <a href="#" class="sidebar-link">
+            <i class="bi bi-grid-1x2-fill"></i>
             <span>Express</span>
         </a>
+
+        <ul class="submenu submenu-closed" style="--submenu-height:215px;">
+            <li class="submenu-item">
+                <a href="{{ route('tutup.edit') }}" class="submenu-link">Tutup Menu Express</a>
+            </li>
+        </ul>   
     </li>
 
     <li class="sidebar-title">Settings</li>

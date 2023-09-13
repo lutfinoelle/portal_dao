@@ -119,7 +119,7 @@ setTableColor()
 jquery_datatable.on('draw', setTableColor)
 
 function checkBranchCode(code) {
-    $.ajax('http://localhost:8000/api/uker?branch_code=' + code, {
+    $.ajax('http://localhost:8001/api/uker?branch_code=' + code, {
         method: 'GET',
         success: function (data) {
             $('#branch_name').val(data.data.nama_uker)
@@ -136,7 +136,7 @@ function checkBranchCode(code) {
 $('#updateBranchCode').submit(function (e) {
     e.preventDefault()
     let data = $(this).serialize()
-    $.ajax('http://localhost:8000/api/uker/update', {
+    $.ajax('http://localhost:8001/api/uker/update', {
         method: 'POST',
         data: data,
         success: function (data) {

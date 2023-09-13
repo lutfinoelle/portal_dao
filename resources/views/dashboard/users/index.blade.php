@@ -56,8 +56,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email" required autocomplete="off">
+                                        <label for="no_pn">No. PN</label>
+                                        <input type="text" class="form-control" name="no_pn" id="no_pn" required autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
@@ -92,7 +92,7 @@
                         <thead>
                             <tr>
                                 <th>Nama Lengkap</th>
-                                <th>Email</th>
+                                <th>No. PN</th>
                                 <th>Role</th>
                                 <th>Actions</th>
                             </tr>
@@ -101,7 +101,7 @@
                             @foreach ($users as $user)
                             <tr>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->no_pn }}</td>
                                 <td>
                                     @switch($user->role)
                                     @case('ADMIN')

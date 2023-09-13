@@ -13,7 +13,7 @@ class AuthController extends Controller
 
     public function loginPost(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('no_pn', 'password');
 
         if (auth()->attempt($credentials)) {
             return redirect()->route('dashboard.index');

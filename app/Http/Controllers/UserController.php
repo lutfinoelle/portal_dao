@@ -23,14 +23,14 @@ class UserController extends Controller
         try {
             $request->validate([
                 'name' => 'required',
-                'email' => 'required|email|unique:users',
+                'no_pn' => 'required|unique:users',
                 'password' => 'required|min:6',
                 'role' => 'required',
             ]);
     
             $user = new User();
             $user->name = $request->name;
-            $user->email = $request->email;
+            $user->no_pn = $request->no_pn;
             $user->password = bcrypt($request->password);
             $user->role = $request->role;
             $user->save();
@@ -51,13 +51,13 @@ class UserController extends Controller
         try {
             $request->validate([
                 'name' => 'required',
-                'email' => 'required|email|unique:users,email,' . $user->id,
+                'no_pn' => 'required|unique:users,no_pn,' . $user->id,
                 'password' => 'nullable|min:6',
                 'role' => 'required',
             ]);
     
             $user->name = $request->name;
-            $user->email = $request->email;
+            $user->no_pn = $request->no_pn;
             $user->password = $request->password ? bcrypt($request->password) : $user->password;
             $user->role = $request->role;
             $user->save();

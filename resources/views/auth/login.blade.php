@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Mazer Admin Dashboard</title>
+    <title>Login - Portal DAO</title>
 
     <link rel="shortcut icon" href="./assets/compiled/svg/favicon.svg" type="image/x-icon" />
     <link rel="shortcut icon"
@@ -36,7 +36,7 @@
                     <form action="{{ route('auth.login') }}" method="POST">
                         @csrf
                         <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="email" class="form-control form-control-xl" placeholder="Username" name="email" autocomplete="off">
+                            <input type="text" class="form-control form-control-xl" placeholder="No. PN/Karyawan" name="no_pn" autocomplete="off">
                             <div class="form-control-icon">
                                 <i class="bi bi-person"></i>
                             </div>

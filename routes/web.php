@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\UkerController;
+use App\Http\Controllers\TutupMenuController;
 use App\Http\Controllers\UserController;
 
 
@@ -24,6 +25,10 @@ Route::group(['prefix' => 'users', 'middleware' => ['auth']], function () {
     Route::get('/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
     Route::post('/{user}/update', [UserController::class, 'update'])->name('users.update');
     Route::get('/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
+});
+
+Route::group(['prefix' => 'tutup', 'middleware' => ['auth']], function () {
+    Route::get('/edit', [TutupMenuController::class, 'edit'])->name('tutup.edit'); 
 });
 
 Route::group(['prefix' => 'uker', 'middleware' => ['auth']], function () {

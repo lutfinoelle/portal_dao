@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Portal DAO</title>
 
     <link rel="shortcut icon" href="./assets/compiled/svg/favicon.svg" type="image/x-icon" />
     <link rel="shortcut icon"
@@ -26,7 +26,7 @@
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <a href="index.html"><img src="./assets/compiled/svg/logo.svg" alt="Logo" srcset="" /></a>
+                            <a href="index.html"><img src="{{ asset('assets/images/logo1.png') }}" alt="Logo" srcset="" /></a>
                         </div>
                         <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -80,13 +80,13 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2023 &copy; Mazer</p>
+                        <p>2023 &copy; Lutfi Nugroho</p>
                     </div>
                     <div class="float-end">
                         <p>
                             Crafted with
                             <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
-                            by <a href="https://saugi.me">Saugi</a>
+                            by <a href="https://saugi.me">Lutfi Nugroho</a>
                         </p>
                     </div>
                 </div>
